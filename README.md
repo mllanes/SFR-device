@@ -30,13 +30,13 @@ I would look like this:
                                                                                                                                                                                                                                            
     https://xxxx.execute-api.{your_region}.amazonaws.com/dev
     
+#### Simulating an HVAC Air Filter clogging progressively (it would reach the critic point in a couple minutes so we can get the alert fast):
+  
+    SFRApiBaseURL={SFRApiBaseURL} npm run NormalWear 
+
 #### Simulating an HVAC Air Filter with a drastic and sudden pressure drop:
 
     SFRApiBaseURL={SFRApiBaseURL} npm run DrasticPressureDrop
-    
-#### Simulating an HVAC Air Filter clogging progressively (it would reach the critic point in a couple minutes so we can get the alert fast):
-  
-    SFRApiBaseURL={SFRApiBaseURL} npm run NormalWear     
 
 #### Simulating a broken or non functional HVAC Air Filter:
 
