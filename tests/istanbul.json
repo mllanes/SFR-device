@@ -1,0 +1,23 @@
+{
+  "reporting": {
+    "dir": "./tests/coverage",
+    "watermarks": {
+      "branches": [
+        50,
+        85
+      ],
+      "statements": [
+        50,
+        85
+      ],
+      "lines": [
+        50,
+        85
+      ],
+      "functions": [
+        50,
+        85
+      ]
+    }
+  }
+}

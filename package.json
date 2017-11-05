@@ -1,0 +1,43 @@
+{
+  "name": "sfr-device",
+  "version": "1.0.0",
+  "description": "**Smart Filter Replacement** is the name of my AWS IoT 2018 challenge project. This repo contains the code to be able to generate simulated static pressure measurements across an HVAC air filter",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "JASMINE_CONFIG_PATH=tests/jasmine.json istanbul --config=tests/istanbul.json cover jasmine",
+    "lint": "standard --fix",
+    "NormalWear": "node index.js",
+    "DrasticPressureDrop": "node index.js DrasticPressureDrop",
+    "NoAirFilter": "node index.js NoAirFilter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mllanes/SFR-device.git"
+  },
+  "author": "Marcos Llanes <marcosllanes@me.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mllanes/SFR-device/issues"
+  },
+  "homepage": "https://github.com/mllanes/SFR-device#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.8.0",
+    "jasmine-expect": "^3.7.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.1.0",
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "fs-extra": "^4.0.2",
+    "production": "0.0.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "rootpath": "^0.1.2"
+  }
+}

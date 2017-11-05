@@ -1,0 +1,12 @@
+{
+  "spec_dir": "tests",
+  "spec_files": [
+    "unit/**/**/*.js",
+    "unit/**/**/**/*.js",
+    "unit/*.js",
+    "functional/**/*.js",
+    "functional/*.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}
