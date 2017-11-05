@@ -13,7 +13,7 @@ Air flow across an HVAC Air Filter follows the [Bernoulli's principle](https://e
 
 *"...an increase in the speed of a fluid occurs simultaneously with a decrease in pressure or a decrease in the fluid's potential energy..."*
 
-The equation that derives from this principle and reasonable assumptions, are the basis for the simulated values. Details about the implementation of the Bernoulli's equation [can be found in the Bernoullis class file](https://github.com/mllanes/SFR-device.git/blob/master/lib/Bernoullis.js)
+The equation that derives from this principle and reasonable assumptions, are the basis for the simulated values. Details about the implementation of the Bernoulli's equation [can be found in the Bernoullis class file](https://github.com/mllanes/SFR-device/blob/master/lib/Bernoullis.js)
 
 The simulated values also take into consideration the progressive, delayed, non linear and asymptotic clogging of an HVAC Air Filter under normal conditions 
 
@@ -25,20 +25,20 @@ The simulated values also take into consideration the progressive, delayed, non 
 
     npm install --production
 
-**Note**. You are going to need now the **SFRApiBaseURL** variable that was produced during the deployment of the [SFR-lambda-data-access-provisioning application](https://github.com/mllanes/SFR-lambda-data-access-provisioning.git)
+**Note:** You are going to need now the **SFRApiBaseURL** variable that was produced during the deployment of the [SFR-lambda-data-access-provisioning application](https://github.com/mllanes/SFR-lambda-data-access-provisioning.git).
 I would look like this:
                                                                                                                                                                                                                                            
     https://xxxx.execute-api.{your_region}.amazonaws.com/dev
     
 #### Simulating an HVAC Air Filter clogging progressively (it would reach the critic point in a couple minutes so we can get the alert fast):
   
-    SFRApiBaseURL=https://xxxx.execute-api.{your_region}.amazonaws.com/dev npm run NormalWear 
+    SFRApiBaseURL={SFRApiBaseURL} npm run NormalWear 
 
 #### Simulating an HVAC Air Filter with a drastic and sudden pressure drop:
 
-    SFRApiBaseURL=https://xxxx.execute-api.{your_region}.amazonaws.com/dev npm run DrasticPressureDrop
+    SFRApiBaseURL={SFRApiBaseURL} npm run DrasticPressureDrop
 
 #### Simulating a broken or non functional HVAC Air Filter:
 
-    SFRApiBaseURL=https://xxxx.execute-api.{your_region}.amazonaws.com/dev npm run NoAirFilter
+    SFRApiBaseURL={SFRApiBaseURL} npm run NoAirFilter
 
